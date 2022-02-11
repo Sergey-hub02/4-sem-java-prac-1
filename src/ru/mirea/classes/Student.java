@@ -2,7 +2,6 @@ package ru.mirea.classes;
 
 public class Student {
   private String name;
-  private String group;
   private double totalGrade;
 
   /**
@@ -10,19 +9,16 @@ public class Student {
    */
   public Student() {
     this.name = "";
-    this.group = "";
     this.totalGrade = 0.0;
   }
 
   /**
    * Конструктор, создающий объект со всеми полями
    * @param name                  имя студента
-   * @param group                 группа
    * @param totalGrade            набранные за семестр баллы
    */
-  public Student(String name, String group, double totalGrade) {
+  public Student(String name, double totalGrade) {
     this.name = name;
-    this.group = group;
     this.totalGrade = totalGrade;
   }
 
@@ -40,22 +36,6 @@ public class Student {
    */
   public void setName(String name) {
     this.name = name;
-  }
-
-  /**
-   * Геттер для поля group
-   * @return       группа студента
-   */
-  public String getGroup() {
-    return this.group;
-  }
-
-  /**
-   * Сеттер для поля group
-   * @param group         новая группа
-   */
-  public void setGroup(String group) {
-    this.group = group;
   }
 
   /**
@@ -81,7 +61,6 @@ public class Student {
   public String toString() {
     return (
       "Student " + this.name + " {\n"
-      + "  group: " + this.group + "\n"
       + "  totalGrade: " + this.totalGrade + "\n"
       + "}\n"
     );
